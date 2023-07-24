@@ -1,11 +1,11 @@
 import { ScrollView, StyleSheet, Text, View,FlatList } from 'react-native'
 import React from 'react' 
 
-const Display = () => {
+const Display = ({val,setVal}) => {
   return (
     <View style={styles.container}>
         <ScrollView >
-            <Text style={styles.inp}>1234</Text>
+            <Text style={styles.inp}>{val}</Text>
         </ScrollView>
     </View>
   )

@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View ,Image} from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import Display from '../components/display/Display'
 import Keypad from '../components/keypad/Keypad'
 
 const Calculator = () => {
+  const [val,setVal]=useState('0')
   return (
     <View style={styles.container}>
-      <Display/>
-      <Keypad/>
+      <Display val={val} setVal={setVal}/>
+      <Keypad val={val} setVal={setVal}/>
     </View>
   )
 }
